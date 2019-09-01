@@ -7,13 +7,13 @@ namespace ISAM5430.Homework
         static void Main(string[] args)
         {
             Console.WriteLine("Enter number 1");
-            string input = Console.ReadLine(); // returns a string
-            int num1 = int.Parse(input);
+            string input = Console.ReadLine(); // prompts user to input a number as a string
+            int num1 = Convert.ToInt32(input); //converts string to interval stores input as a number with to variable num1
             Console.WriteLine("Enter number 2");
-            input = Console.ReadLine(); // reads a line from the keyboard and assigns to the input variable.
-            int num2 = Convert.ToInt32(input);
+            input = Console.ReadLine(); // prompts user to input a number as a string
+            int num2 = Convert.ToInt32(input); //converts string to interval stores input as a number with to variable num1
             Console.WriteLine("Enter the operator: (+, -, /, *)");
-            string op = Console.ReadLine();
+            string op = Console.ReadLine(); //saves user input to variable op for use with calculation
 
             if (op == "+")
             {
@@ -41,7 +41,10 @@ namespace ISAM5430.Homework
                 Console.WriteLine($"The answer is: {div}");
             }
 
-            // do the same for subtraction, division, and multiplication.
+            else 
+            {
+           Console.WriteLine("You must select numbers and operators.");
+            }
         }
     }
 }
