@@ -11,7 +11,7 @@ namespace ISAM5430.Homework
             int num1 = Convert.ToInt32(input); //converts string to interval stores input as a number with to variable num1
             Console.WriteLine("Enter number 2");
             input = Console.ReadLine(); // prompts user to input a number as a string
-            int num2 = Convert.ToInt32(input); //converts string to interval stores input as a number with to variable num1
+            int num2 = Convert.ToInt32(input); //converts string to interval stores input as a number with to variable num2
             Console.WriteLine("Enter the operator: (+, -, /, *)");
             string op = Console.ReadLine(); //saves user input to variable op for use with calculation
 
@@ -25,25 +25,25 @@ namespace ISAM5430.Homework
 
 
             }
-            if (op == "-")
+            else if (op == "-")
             {
                 int sub = num1 - num2;
                 Console.WriteLine($"The answer is: {sub}");
             }
-            if (op == "*")
+            else if (op == "*")
             {
                 int mult = num1 * num2;
                 Console.WriteLine($"The answer is: {mult}");
             }
-            if (op == "/")
+            else if (op == "/")
             {
                 int div = num1 / num2;
                 Console.WriteLine($"The answer is: {div}");
             }
 
-            else 
+            else
             {
-           Console.WriteLine("You must select numbers and operators.");
+                Console.WriteLine("You must select numbers and operators.");
             }
         }
     }
